@@ -1,10 +1,10 @@
 package main
 
-import "github.com/mohammaderm/PhoneBook/repository/contact"
+import "github.com/mohammaderm/PhoneBook/application"
 
 func main() {
-	_, err := contact.NewMysqlRepo()
+	err := application.Run()
 	if err != nil {
-		panic(err)
+		panic(err.Error())
 	}
 }

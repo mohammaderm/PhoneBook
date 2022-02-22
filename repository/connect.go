@@ -1,15 +1,17 @@
-package contact
+package repository
 
 import (
 	"database/sql"
 	"fmt"
+
+	_ "github.com/go-sql-driver/mysql"
 )
 
 const (
-	username = "mohammad"
-	password = "1115444123Mohammad@"
-	hostname = "127.0.0.1:3306"
-	dbname   = "phonebook"
+	username = "#"
+	password = "#"
+	hostname = "#"
+	dbname   = "#"
 )
 
 func (d *MysqlRepo) connect() error {
@@ -21,10 +23,9 @@ func (d *MysqlRepo) connect() error {
 	)
 	db, err := sql.Open("mysql", dsn)
 	if err != nil {
-		return nil
+		return err
 	}
 
-	defer db.Close()
 	d.db = db
 	return nil
 }
