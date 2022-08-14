@@ -8,10 +8,10 @@ import (
 )
 
 const (
-	username = "#"
-	password = "#"
-	hostname = "#"
-	dbname   = "#"
+	username = "mohammad"
+	password = "1115444123Mohammad@"
+	hostname = "127.0.0.1:3306"
+	dbname   = "phonebook"
 )
 
 func (d *MysqlRepo) connect() error {
